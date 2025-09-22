@@ -28,11 +28,28 @@ int main()
 		{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
 	};
 
+	int PlayerX = 1;
+	int PlayerY = 1;
+	char PlayerShape = 'P';
+
+	char Sprites[10] = { ' ', '*', };
+
+
+
+	//Render();
 	for (int Y = 0; Y < 10; ++Y)
 	{
 		for (int X = 0; X < 10; ++X)
 		{
-			cout << World[Y][X];
+			if (PlayerX == X && PlayerY == Y)
+			{
+				cout << PlayerShape;
+			}
+			else //other
+			{
+				cout << Sprites[World[Y][X]];
+			}
+
 		}
 		cout << endl;
 	}
