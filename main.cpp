@@ -2,26 +2,31 @@
 
 using namespace std;
 
-//entry 
+//*****
+// ****
+//  ***
+//   **
+//    *
 int main()
 {
-	int Number = 0;
-	int Sum = 0;
+	int Number[10] = { 0, };
 
-	for (int i = 1; i <= 100; i++) 
+	int Count = 0;
+	cin >> Count;
+
+	for (int i = 1; i <= Count; ++i)
 	{
-		Sum += i;
-	}
+		for (int j = 1; j < i; ++j)
+		{
+			cout << " ";
+		}
 
-	cout << Sum << endl;
-	
-	Sum = 0;
-	for (int i = 3; i <= 100; i+=3)
-	{
-		Sum += i;
+		for (int j = 1; j <= Count - (i - 1); ++j)
+		{
+			cout << "*";
+		}
+		cout << "\n";
 	}
-
-	cout << Sum << endl;
 
 	return 0;
 }
