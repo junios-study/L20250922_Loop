@@ -30,8 +30,11 @@ int KeyCode;
 
 void Input()
 {
+	int C;
 	//Input
 	KeyCode = _getch();
+
+	return;
 }
 
 void Process()
@@ -81,11 +84,8 @@ void Render()
 	}
 }
 
-
 int main()
 {
-
-
 	//frame, deltaseconds
 	while (bIsRunning)
 	{
